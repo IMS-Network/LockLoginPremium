@@ -1,12 +1,16 @@
 # LockLoginPremium
-LockLoginPremium source code PLEASE DO NOT USE A COMPILED VERSION OF THIS CODE IN BUKKIT, AS IT WILL BLOCK YOU FROM JOINING THE SERVER
+This module allows <b>only at BungeeCord and Velocity</b> to authenticate premium users as soon as they join.
 
-### Bukkit module progress
+As LockLogin does not use any method to verify if a player joins with a premium account, the process is manual and requires the player to run $premium.
 
-- NP = Non Published
-- P = Published
-- B = Beta
+### Why $premium and not /premium
+Acording to LockLogin default configuration, modules command prefix is $ instead of /.
 
-| Version    | Status             |
-|-           |-                   |
-| (NP) 1.1.4 | Time out on join   |
+This is because LockLogin wants to avoid any command overwrite causing errors. For example, setting the module command prefix to / and creating a msg command, would replace the /msg command with LockLogin one.
+
+Anyway, the module command prefix can be changed [in configuration file](https://github.com/KarmaConfigs/LockLoginReborn/wiki/Configuration)
+
+```yaml
+#Module commands prefix
+ModulePrefix: "$"
+```
