@@ -1,0 +1,11 @@
+name: LockLoginPremium
+version: ${project.version}
+authors: [KarmaDev, Gonci]
+description:
+  - LockLogin premium module to
+  - enable premium accounts in BungeeCord
+update_url: "https://karmaconfigs.github.io/updates/LockLogin/modules/premium/v2/"
+load: POSTPLUGIN
+loader_bukkit: eu.locklogin.module.premium.bukkit.Premium
+loader_bungee: eu.locklogin.module.premium.bungee.Premium
+loader_velocity: eu.locklogin.module.premium.velocity.Premium

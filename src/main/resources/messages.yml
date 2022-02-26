@@ -1,0 +1,72 @@
+#################################
+#                               #
+#       LockLogin Premium       #
+#                               #
+#################################
+
+Prefix: "&7( &ePremium &7) "
+
+####################################
+#  The message sent to the player
+#  when he types $premium
+####################################
+Activated: "&aPremium mode activated"
+
+####################################
+#  The message sent to the player
+#  when he types $offline
+####################################
+DeActivated: "&aPremium mode disabled"
+
+####################################
+#  The message sent to the player
+#  when he types $premium, and he
+#  already has premium
+####################################
+Already: "&cYou're already premium"
+
+
+####################################
+#  The message sent to the player
+#  when he types $premium ,and he
+#  isn't premium
+####################################
+NotPremium: "&cYour account is cracked"
+
+
+####################################
+#  The message sent to the player
+#  when he types $premium and
+#  something goes wrong
+####################################
+Error: "&4Unknown error occurred, contact server admins."
+
+
+####################################
+#  The message sent to the player
+#  when he joins the server, and
+#  he can activate premium
+####################################
+PremiumAvailable: "&bType &9&o{command}premium &bto enable premium's autologin"
+
+
+####################################
+#  The message sent to the player
+#  when he joins the server and
+#  has premium activated
+####################################
+AutoLogged: "&aYou've been auto-logged"
+
+####################################
+#  The message sent to the player
+#  when he tries to perform any premium
+#  action and mojang servers are down
+####################################
+MojangDown: "&cMojang servers seems to be down and you were not able to be authenticated"
+
+####################################
+#  The message sent to the console
+#  when the player join the server
+#  and has premium activated
+####################################
+AutoLoggedConsole: "&eThe player &6{player}&e has been auto-logged"

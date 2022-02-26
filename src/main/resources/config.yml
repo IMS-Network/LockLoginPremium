@@ -1,0 +1,18 @@
+#################################
+#                               #
+#       LockLogin Premium       #
+#                               #
+#################################
+
+#Enable debug files
+#such when a player is
+#auto-logged
+Debug: true
+
+#Should the plugin keep
+#offline UUIDs of /premium
+#players?
+#
+#This is recommended to avoid
+#player data loses
+KeepOffline: true
