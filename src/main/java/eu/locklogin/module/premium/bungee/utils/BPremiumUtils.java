@@ -33,12 +33,4 @@ public class BPremiumUtils {
             ex.printStackTrace();
         }
     }
-
-    public final MethodHandle setUniqueId() throws Throwable {
-        MethodHandles.Lookup lookup = MethodHandles.lookup();
-
-        Field uniqueIdField = InitialHandler.class.getDeclaredField("uniqueId");
-        uniqueIdField.setAccessible(true);
-        return lookup.unreflectSetter(uniqueIdField);
-    }
 }

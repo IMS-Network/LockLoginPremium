@@ -24,11 +24,15 @@ public final class Config {
         } catch (Throwable ignored) {}
     }
 
-    public final boolean debug() {
+    public boolean debug() {
         return cfg.getBoolean("Debug", true);
     }
 
-    public final boolean keepOffline() {
+    public boolean skin() {
+        return cfg.getBoolean("Skin", true);
+    }
+
+    public boolean keepOffline() {
         return cfg.getBoolean("KeepOffline", true);
     }
 }

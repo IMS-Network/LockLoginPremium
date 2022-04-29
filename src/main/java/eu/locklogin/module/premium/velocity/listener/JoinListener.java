@@ -6,6 +6,7 @@ import com.velocitypowered.api.event.connection.PreLoginEvent;
 import com.velocitypowered.api.event.player.GameProfileRequestEvent;
 import com.velocitypowered.api.proxy.Player;
 import eu.locklogin.api.module.plugin.api.event.ModuleEventHandler;
+import eu.locklogin.api.module.plugin.api.event.plugin.PluginIpValidationEvent;
 import eu.locklogin.api.module.plugin.api.event.user.*;
 import eu.locklogin.api.module.plugin.api.event.util.EventListener;
 import eu.locklogin.api.module.plugin.javamodule.sender.ModulePlayer;
@@ -36,16 +37,16 @@ public class JoinListener implements EventListener {
     }
 
     @ModuleEventHandler(priority = ModuleEventHandler.Priority.LAST)
-    public void onJoin(UserPreJoinEvent e){
+    public void onJoin(PluginIpValidationEvent e){
         if (mojangActive()) {
-            PremiumData data = new PremiumData(e.getName());
-
             PreLoginEvent eventObj = (PreLoginEvent) e.getEvent();
+
+            PremiumData data = new PremiumData(eventObj.getUsername());
 
             if (data.isPremium()) {
                 BPremiumUtils utils = new BPremiumUtils(eventObj);
                 if (utils.check()) {
-                    module.getConsole().sendMessage("&aClient {0} has passed premium check and his connection is now in online mode", e.getName());
+                    module.getConsole().sendMessage("&aClient {0} has passed premium check and his connection is now in online mode", eventObj.getUsername());
                 }
             }
         }

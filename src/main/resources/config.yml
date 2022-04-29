@@ -9,6 +9,13 @@
 #auto-logged
 Debug: true
 
+#BETA OPTION
+#
+#Only available in BungeeCord.
+#This options tells the plugin if keep the
+#online mode skin or not
+Skin: true
+
 #Should the plugin keep
 #offline UUIDs of /premium
 #players?
